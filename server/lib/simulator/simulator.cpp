@@ -1,8 +1,8 @@
-#include <src/simulator.h>
+#include <lib/simulator/simulator.h>
 
 #include <thread>
 
-#include <src/device.h>
+#include <lib/device/device.h>
 
 Simulator::Simulator(const std::chrono::seconds& min_cycle_duration)
     : min_cycle_duration_(min_cycle_duration)

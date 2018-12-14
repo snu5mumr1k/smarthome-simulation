@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include <src/device.h>
-#include <src/lamp.h>
-#include <src/simulator.h>
+#include <lib/device/device.h>
+#include <lib/device/lamp.h>
+#include <lib/simulator/simulator.h>
 
 int main() {
     using namespace std::chrono_literals;

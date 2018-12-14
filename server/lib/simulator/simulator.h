@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 
-#include <src/device.h>
+#include <lib/device/device.h>
 
 class Simulator {
 public:

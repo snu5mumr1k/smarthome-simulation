@@ -1,6 +1,6 @@
 #pragma once
 
-#include <src/device.h>
+#include <lib/device/device.h>
 
 class Lamp final : public Device {
 public:
