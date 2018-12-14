@@ -8,8 +8,8 @@
 int main() {
     using namespace std::chrono_literals;
 
-    Simulator simulator(1s);
-    simulator.AddDevice(std::make_unique<Lamp>(/* is_initially_on = */ true));
+    Simulator simulator(1s, "commands");
+    simulator.AddDevice(std::make_unique<Lamp>());
     simulator.AddDevice(std::make_unique<Kettle>(20, 30.5));
     simulator.Run();
 }
