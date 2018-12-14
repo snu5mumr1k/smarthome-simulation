@@ -34,10 +34,6 @@ void Kettle::DoStep() {
 }
 
 void Kettle::DumpState() const {
-    if (is_boiling_) {
-        std::cout << "Kettle is on. ";
-    } else {
-        std::cout << "Kettle is off. ";
-    }
-    std::cout << "Current temperature is " << temperature_ << std::endl;
+    std::cerr << is_boiling_ << "\t";
+    std::cerr << temperature_ << std::endl;
 }

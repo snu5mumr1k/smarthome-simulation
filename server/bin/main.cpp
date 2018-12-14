@@ -1,3 +1,4 @@
+#include <iomanip>
 #include <iostream>
 
 #include <lib/device/device.h>
@@ -7,6 +8,9 @@
 
 int main() {
     using namespace std::chrono_literals;
+
+    std::cerr << std::boolalpha;
+    std::cout << std::boolalpha;
 
     Simulator simulator(1s, "commands");
     simulator.AddDevice(std::make_unique<Lamp>());

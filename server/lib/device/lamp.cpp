@@ -1,6 +1,7 @@
 #include <lib/device/lamp.h>
 
 #include <iostream>
+#include <iomanip>
 
 namespace {
     const Lamp::Voltage kVoltageLow = 0.0;
@@ -17,12 +18,8 @@ Lamp::Lamp()
 }
 
 void Lamp::DumpState() const {
-    if (is_on_) {
-        std::cerr << "Lamp is on! ";
-    } else {
-        std::cerr << "Lamp is off! ";
-    }
-    std::cerr << "Temperature is " << temperature_ << std::endl;
+    std::cout << is_on_ << "\t";
+    std::cout << temperature_ << std::endl;
 }
 
 void Lamp::DoStep() {
