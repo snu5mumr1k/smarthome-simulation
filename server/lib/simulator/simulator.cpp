@@ -49,6 +49,12 @@ bool Simulator::ProcessCommands() {
         for (std::getline(commands, command); commands; std::getline(commands, command)) {
             if (command == "stop") {
                 quit = true;
+            } else if (command == "Boil") {
+                for (const auto& device : devices_) {
+                    if (device->GetType() == Device::Type::kettle) {
+                        device->Handle();
+                    }
+                }
             }
         }
     }

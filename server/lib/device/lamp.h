@@ -11,6 +11,11 @@ public:
 
     void DoStep() final;
     void DumpState() const final;
+    void Handle() final;
+
+    Device::Type GetType() const final {
+        return Device::Type::lamp;
+    }
 
 private:
     bool is_on_;

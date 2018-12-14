@@ -37,3 +37,7 @@ void Kettle::DumpState() const {
     std::cerr << is_boiling_ << "\t";
     std::cerr << temperature_ << std::endl;
 }
+
+void Kettle::Handle() {
+    is_boiling_ = true;
+}

@@ -23,7 +23,6 @@ void Lamp::DumpState() const {
 }
 
 void Lamp::DoStep() {
-    is_on_ = !is_on_;
     if (is_on_) {
         voltage_ = kVoltageHigh;
         temperature_ += 1.0;
@@ -31,4 +30,7 @@ void Lamp::DoStep() {
         voltage_ = kVoltageLow;
         temperature_ -= 0.5;
     }
+}
+
+void Lamp::Handle() {
 }
