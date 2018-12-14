@@ -7,11 +7,14 @@ Lamp::Lamp(bool is_initially_on)
 {
 }
 
-void Lamp::DoStep() {
+void Lamp::DumpState() const {
     if (is_on_) {
         std::cerr << "Lamp is on!" << std::endl;
     } else {
         std::cerr << "Lamp is off!" << std::endl;
     }
+}
+
+void Lamp::DoStep() {
     is_on_ = !is_on_;
 }

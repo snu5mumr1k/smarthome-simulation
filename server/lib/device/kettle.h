@@ -14,6 +14,7 @@ public:
     Kettle(Volume volume, Temperature temperature);
 
     void DoStep() final;
+    void DumpState() const final;
 
 private:
     void LogState() const;

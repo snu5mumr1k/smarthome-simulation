@@ -7,6 +7,7 @@ public:
     explicit Lamp(bool is_initially_on);
 
     void DoStep() final;
+    void DumpState() const final;
 
 private:
     bool is_on_;

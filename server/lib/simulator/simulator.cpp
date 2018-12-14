@@ -15,6 +15,7 @@ void Simulator::Run() {
         const auto iteration_start = std::chrono::system_clock::now();
 
         DoStep();
+        ObtainMetrics();
 
         const auto time_passed = std::chrono::system_clock::now() - iteration_start;
         const auto time_to_sleep = min_cycle_duration_ - time_passed;
@@ -22,9 +23,15 @@ void Simulator::Run() {
     }
 }
 
-void Simulator::DoStep() {
+void Simulator::DoStep() const {
     for (const auto& device : devices_) {
         device->DoStep();
+    }
+}
+
+void Simulator::ObtainMetrics() const {
+    for (const auto& device : devices_) {
+        device->DumpState();
     }
 }
 

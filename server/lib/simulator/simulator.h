@@ -14,7 +14,8 @@ public:
     void AddDevice(std::unique_ptr<Device> device);
 
 private:
-    void DoStep();
+    void DoStep() const;
+    void ObtainMetrics() const;
 
     const std::chrono::seconds min_cycle_duration_;
     std::vector<std::unique_ptr<Device>> devices_;

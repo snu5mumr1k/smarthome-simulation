@@ -31,10 +31,9 @@ void Kettle::DoStep() {
         temperature_ -= cooling_degrees_per_second_;
         temperature_ = std::max(temperature_, kRoomTemperature);
     }
-    LogState();
 }
 
-void Kettle::LogState() const {
+void Kettle::DumpState() const {
     if (is_boiling_) {
         std::cout << "Kettle is on. ";
     } else {
