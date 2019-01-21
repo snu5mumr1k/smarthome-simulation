@@ -1,4 +1,4 @@
-#include <lib/simulator/simulator.h>
+#include "simulator.h"
 
 #include <fstream>
 #include <thread>

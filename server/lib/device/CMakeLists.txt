@@ -1,7 +1,7 @@
 add_library(
     Device
 
-    device.h
-    kettle.h
-    lamp.h
+    device.cpp
+    kettle.cpp
+    lamp.cpp
 )

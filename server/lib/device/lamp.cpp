@@ -1,4 +1,4 @@
-#include <lib/device/lamp.h>
+#include "lamp.h"
 
 #include <iostream>
 #include <iomanip>

@@ -1,4 +1,4 @@
-#include <lib/device/kettle.h>
+#include "kettle.h"
 
 #include <cstdlib>
 #include <iostream>
